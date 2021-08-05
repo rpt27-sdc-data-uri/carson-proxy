@@ -2,41 +2,68 @@
 <html>
   <head>
     <title>Audible</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
   </head>
-  <body >
+  <body>
     <div class="main-header">
       <div class="header-container">
-        <div class="header-nav-mobile"><img src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/mobile_nav.png"></div>
-        <div class="header-logo-desktop"><img src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/logo.svg"></div>
-        <div class="search-box-mobile"><img src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/search.png"></div>
-        <div class="header-logo-mobile"><img width="100%" height="100%" src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/logo_mobile.png"></div>
+        <div class="header-nav-mobile">
+          <img
+            src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/mobile_nav.png"
+          />
+        </div>
+        <div class="header-logo-desktop">
+          <img
+            src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/logo.svg"
+          />
+        </div>
+        <div class="search-box-mobile">
+          <img
+            src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/search.png"
+          />
+        </div>
+        <div class="header-logo-mobile">
+          <img
+            width="100%"
+            height="100%"
+            src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/logo_mobile.png"
+          />
+        </div>
         <div class="right-side">
-           <a href='#'>Sign In</a>
-          <div class="search-box"><img src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/search-bar.png"></div>
+          <a href="#">Sign In</a>
+          <div class="search-box">
+            <img
+              src="https://hr-rpt-audible.s3-us-west-1.amazonaws.com/search-bar.png"
+            />
+          </div>
         </div>
       </div>
     </div>
-    <div class="container" id='title-service'></div>
-    <div class="container" id='also-enjoyed-service'></div>
-    <div class="container" id='summary'></div>
-    <div class="container" id='aggReview'></div>
-    <div class="container" id='reviews'></div>
-    <script src='http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/title-service.js'></script>
-    <script src='http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/summary.js'></script>
-    <script src='http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/aggReview.js'></script>
-    <script src='http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/reviews.js'></script>
-    <script src='http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/alsoEnjoyedBundle.js'></script>
+    <div class="container" id="price-service"></div>
+    <!-- <div class="container" id="title-service"></div>
+    <div class="container" id="also-enjoyed-service"></div>
+    <div class="container" id="summary"></div>
+    <div class="container" id="aggReview"></div>
+    <div class="container" id="reviews"></div>
+    <script src="http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/title-service.js"></script>
+    <script src="http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/summary.js"></script>
+    <script src="http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/aggReview.js"></script>
+    <script src="http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/reviews.js"></script>
+    <script src="http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/alsoEnjoyedBundle.js"></script> -->
     <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
-        console.log('DOM content loaded!')
-        if(document.querySelector('#price-service')){
-          var script = document.createElement('script');
-          script.src = 'http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/priceBundle.js';
-          document.body.appendChild(script)
+      document.addEventListener("DOMContentLoaded", function (event) {
+        console.log("DOM content loaded!");
+        if (document.querySelector("#price-service")) {
+          var script = document.createElement("script");
+          script.src = "http://localhost:3001/priceBundle.js";
+          // script.src = 'http://ec2-34-219-131-242.us-west-2.compute.amazonaws.com:5500/files/priceBundle.js';
+          document.body.appendChild(script);
         }
       });
     </script>
