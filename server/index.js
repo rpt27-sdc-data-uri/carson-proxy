@@ -8,7 +8,10 @@ const { GetObjectCommand } = require("@aws-sdk/client-s3");
 const s3 = require("./s3-connect.js");
 
 const port = 3000;
+const ec2Server1 = "http://3.135.206.252:3001";
+const ec2Server2 = "http://18.217.6.71:3001";
 const localPriceServer = `http://localhost:3001`;
+
 // const priceServer =
 //   "http://ec2-34-221-235-141.us-west-2.compute.amazonaws.com:3000";
 // const titleServer = "http://13.57.14.144:2002";
